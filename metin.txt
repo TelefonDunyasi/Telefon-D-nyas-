@@ -1,0 +1,22 @@
+<div class="brand">${p.brand==="Apple"?"🍎 APPLE":"SAMSUNG GALAXY"}</div>
+<h3>${p.name}</h3>
+<div class="storage">${p.storage}</div>
+<div class="price">Güncel fiyatı incele</div>
+<div class="note">Fiyat ve stok bilgileri değişebilir. Resmî marka sayfasından kontrol edin.</div>
+<div class="actions">
+<button onclick="detail(${i})">Telefon bilgileri</button>
+<a class="check" href="${p.url}" target="_blank" rel="noopener noreferrer">Resmî sayfayı aç ↗</a>
+</div>
+</div>
+</article>`).join("");
+}
+
+function detail(i){
+const p=phones[i];
+alert(p.name+"\nMarka: "+p.brand+"\n"+p.storage+"\n\nGüncel bilgi ve fiyat için Resmî sayfayı aç düğmesini kullan.");
+}
+render();
+</script>
+</body>
+</html>
+
