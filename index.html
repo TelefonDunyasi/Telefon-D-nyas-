@@ -3,680 +3,248 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101827">
-<meta name="description" content="Telefon Dünyası: Apple ve Samsung telefonlarını keşfet, özelliklerini karşılaştır ve resmî sitelere ulaş.">
-<title>Telefon Dünyası | Telefonunu Keşfet</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telefon Dünyası</title>
 <style>
-:root {
-  --bg: #f4f7fb;
-  --ink: #172033;
-  --muted: #69758a;
-  --blue: #315efb;
-  --line: #e5eaf2;
-  --card: #ffffff;
-}
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-}
-
-header {
-  background: #101827;
-  color: white;
-  padding: 18px 5%;
-}
-
-.nav {
-  max-width: 1120px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: 850;
-  letter-spacing: -.7px;
-}
-
-.logo span { color: #7ea0ff; }
-
-.nav a {
-  color: #e4eaff;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.hero {
-  padding: 48px 20px 40px;
-  background:
-    radial-gradient(ellipse at 85% 20%, #354e91 0, transparent 38%),
-    linear-gradient(135deg, #101827, #1e2d4c);
-  color: white;
-}
-
-.hero-inner {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.eyebrow {
-  color: #a9bdff;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: clamp(34px, 7vw, 58px);
-  letter-spacing: -2px;
-  line-height: 1.08;
-  margin: 14px 0;
-}
-
-.hero p {
-  color: #d0d9ee;
-  line-height: 1.7;
-  max-width: 560px;
-}
-
-.search {
-  display: flex;
-  max-width: 600px;
-  margin-top: 25px;
-  gap: 10px;
-}
-
-.search input {
-  width: 100%;
-  min-width: 0;
-  border: 1px solid #53617d;
-  background: white;
-  color: #172033;
-  border-radius: 12px;
-  padding: 15px;
-  font-size: 15px;
-  outline-color: #7ea0ff;
-}
-
-main {
-  max-width: 1120px;
-  margin: auto;
-  padding: 30px 18px 55px;
-}
-
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin: 0;
-  font-size: 25px;
-  letter-spacing: -.7px;
-}
-
-.muted {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.filters {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 20px 0 25px;
-}
-
-.filter {
-  border: 1px solid #dce3ef;
-  background: white;
-  color: #33405a;
-  border-radius: 999px;
-  padding: 10px 15px;
-  font-size: 13px;
-  font-weight: 750;
-  cursor: pointer;
-}
-
-.filter.active {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: white;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 19px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px #1a31500a;
-}
-
-.phone-stage {
-  min-height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, #e7edff, #f7f9ff);
-}
-
-.phone-stage.samsung {
-  background: linear-gradient(145deg, #e0f3ef, #f6fbfa);
-}
-
-.phone-stage::before {
-  content: "";
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  background: #ffffffa8;
-}
-
-.phone {
-  width: 85px;
-  height: 155px;
-  border: 4px solid #252b36;
-  border-radius: 20px;
-  background: linear-gradient(155deg, #7898ff, #1f347a);
-  box-shadow: 8px 12px 24px #17203335;
-  position: relative;
-  z-index: 1;
-  transform: rotate(-7deg);
-}
-
-.phone::before {
-  content: "";
-  position: absolute;
-  width: 27px;
-  height: 6px;
-  border-radius: 10px;
-  background: #151b27;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.phone::after {
-  content: "";
-  position: absolute;
-  inset: 25px 8px 8px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #c7d5ff66, #0c1c5a99);
-}
-
-.phone.silver {
-  background: linear-gradient(150deg, #f1f1f5, #969eae);
-}
-
-.phone.black {
-  background: linear-gradient(150deg, #6a7180, #171a23);
-}
-
-.phone.purple {
-  background: linear-gradient(150deg, #d6c5ff, #6447a5);
-}
-
-.phone.green {
-  background: linear-gradient(150deg, #b6e5d6, #287b69);
-}
-
-.phone.gold {
-  background: linear-gradient(150deg, #f2d8b0, #9b6942);
-}
-
-.phone-back {
-  width: 85px;
-  height: 155px;
-  border: 4px solid #252b36;
-  border-radius: 20px;
-  background: linear-gradient(155deg, #3d4659, #121721);
-  box-shadow: 8px 12px 24px #17203335;
-  position: relative;
-  z-index: 1;
-  transform: rotate(8deg) translateX(12px);
-}
-
-.lenses {
-  position: absolute;
-  top: 10px;
-  left: 9px;
-  display: grid;
-  grid-template-columns: repeat(2, 18px);
-  gap: 5px;
-}
-
-.lenses i {
-  display: block;
-  width: 18px;
-  height: 18px;
-  border: 3px solid #737e92;
-  background: #101827;
-  border-radius: 50%;
-}
-
-.phone-caption {
-  position: absolute;
-  bottom: 12px;
-  left: 14px;
-  color: #5c6880;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.card-body { padding: 17px; }
-
-.brand {
-  font-size: 11px;
-  font-weight: 850;
-  color: #586b9a;
-  letter-spacing: 1px;
-}
-
-.card h3 {
-  margin: 8px 0;
-  font-size: 19px;
-  letter-spacing: -.4px;
-}
-
-.storage {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.specs {
-  border-top: 1px solid var(--line);
-  padding-top: 13px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 8px;
-}
-
-.spec-label {
-  color: var(--muted);
-  font-size: 11px;
-  margin-bottom: 4px;
-}
-
-.spec-value {
-  font-size: 13px;
-  font-weight: 750;
-}
-
-.actions {
-  display: grid;
-  gap: 8px;
-  margin-top: 17px;
-}
-
-button, .official {
-  font: inherit;
-}
-
-.details-btn, .official {
-  display: block;
-  width: 100%;
-  text-align: center;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 13px;
-  font-weight: 750;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.details-btn {
-  background: #eef2ff;
-  border: 0;
-  color: #294bd0;
-}
-
-.official {
-  background: #172033;
-  color: white;
-  border: 1px solid #172033;
-}
-
-.compare-section {
-  margin-top: 48px;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 22px;
-}
-
-.compare-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 17px;
-}
-
-.compare-row select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #dce3ef;
-  border-radius: 10px;
-  background: white;
-  color: var(--ink);
-  font-size: 14px;
-}
-
-.compare-result {
-  margin-top: 16px;
-  background: #f5f7fc;
-  border-radius: 12px;
-  padding: 15px;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.empty {
-  grid-column: 1 / -1;
-  background: white;
-  border-radius: 15px;
-  padding: 28px;
-  text-align: center;
-  color: var(--muted);
-}
-
-footer {
-  background: #101827;
-  color: #d0d9ee;
-  text-align: center;
-  padding: 28px 18px;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-@media (max-width: 850px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 540px) {
-  .hero { padding: 36px 18px; }
-  .grid { grid-template-columns: 1fr; }
-  .phone-stage { min-height: 190px; }
-  .compare-section { padding: 16px; }
-  .compare-row { grid-template-columns: 1fr; }
-  .logo { font-size: 19px; }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f5f9;color:#172033}
+header{background:#111827;color:white;padding:24px 16px;text-align:center}
+header h1{margin:0 0 8px;font-size:30px}
+header p{margin:0;color:#d1d5db}
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+button,select,input{font:inherit}
+nav button,.filter button{border:0;border-radius:10px;padding:10px 14px;cursor:pointer}
+nav button{background:#374151;color:white}
+main{max-width:1100px;margin:auto;padding:20px 14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.tools input,.tools select{flex:1;min-width:150px;padding:12px;border:1px solid #d1d5db;border-radius:10px;background:white}
+h2{margin-top:24px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px #10182812}
+.photo{height:240px;background:white;display:flex;align-items:center;justify-content:center;padding:12px}
+.photo img{width:100%;height:100%;object-fit:contain}
+.info{padding:16px}
+.brand{font-size:12px;color:#64748b;font-weight:bold;text-transform:uppercase}
+.info h3{margin:8px 0;font-size:19px}
+.spec{font-size:14px;line-height:1.7;color:#475569;min-height:48px}
+.add{width:100%;border:0;border-radius:10px;padding:12px;background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+.add:active{background:#1d4ed8}
+.cart{background:white;border-radius:16px;padding:16px;margin-top:26px;box-shadow:0 4px 16px #10182812}
+.cart-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #e5e7eb;padding:12px 0}
+.remove{border:0;border-radius:8px;background:#fee2e2;color:#991b1b;padding:8px;cursor:pointer}
+.clear{border:0;border-radius:10px;padding:10px;background:#374151;color:white;cursor:pointer}
+.note{font-size:13px;color:#64748b;line-height:1.6}
+footer{text-align:center;background:#111827;color:#d1d5db;padding:22px;margin-top:30px}
+.empty{color:#64748b}
+@media(max-width:480px){header h1{font-size:25px}.photo{height:210px}}
 </style>
 </head>
-
 <body>
+
 <header>
-  <div class="nav">
-    <div class="logo">📱 Telefon <span>Dünyası</span></div>
-    <a href="#telefonlar">Telefonları keşfet ↓</a>
-  </div>
+  <h1>📱 Telefon Dünyası</h1>
+  <p>Yeni telefonları keşfet, karşılaştır ve sepetine ekle.</p>
+  <nav>
+    <button onclick="goProducts()">Telefonlar</button>
+    <button onclick="goCart()">🛒 Sepetim (<span id="cartCount">0</span>)</button>
+  </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Akıllı telefon rehberi</div>
-    <h1>Sana en uygun<br>telefonu keşfet.</h1>
-    <p>Modelleri incele, temel özelliklerini karşılaştır ve güncel bilgiler için resmî marka sayfalarına ulaş.</p>
-    <div class="search">
-      <input id="search" type="search" placeholder="Telefon modeli ara..." aria-label="Telefon modeli ara">
-    </div>
-  </div>
-</section>
-
 <main>
-  <section id="telefonlar">
-    <div class="section-heading">
-      <div>
-        <h2>Telefon modelleri</h2>
-        <div class="muted">Modelleri incele ve sana uygun olanı seç.</div>
-      </div>
-      <div class="muted" id="count"></div>
-    </div>
+  <h2>Telefonları keşfet</h2>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Telefon modeli ara...">
+    <select id="brand">
+      <option value="Tümü">Tüm markalar</option>
+      <option value="Apple">Apple</option>
+      <option value="Samsung">Samsung</option>
+    </select>
+  </div>
 
-    <div class="filters">
-      <button class="filter active" data-brand="Tümü">Tümü</button>
-      <button class="filter" data-brand="Apple">🍎 Apple</button>
-      <button class="filter" data-brand="Samsung">Samsung Galaxy</button>
-    </div>
+  <section class="products" id="products"></section>
 
-    <div class="grid" id="phones"></div>
-  </section>
-
-  <section class="compare-section" id="karsilastir">
-    <h2>Telefon karşılaştır</h2>
-    <p class="muted">İki model seç, temel özelliklerini yan yana incele.</p>
-    <div class="compare-row">
-      <select id="firstPhone" aria-label="Birinci telefon"></select>
-      <select id="secondPhone" aria-label="İkinci telefon"></select>
-    </div>
-    <div class="compare-result" id="comparison" aria-live="polite"></div>
+  <section class="cart" id="cart">
+    <h2>🛒 Sepetim</h2>
+    <div id="cartItems"><p class="empty">Sepetin henüz boş.</p></div>
+    <p id="cartTotal"><strong>Sepetteki ürün adedi: 0</strong></p>
+    <button class="clear" onclick="clearCart()">Sepeti temizle</button>
+    <p class="note">Bu, tarayıcıda çalışan bir demo sepettir. Gerçek sipariş veya ödeme oluşturmaz.</p>
   </section>
 </main>
 
 <footer>
-  <strong>📱 Telefon Dünyası</strong><br>
-  Telefonları keşfet, özellikleri karşılaştır.<br>
-  Model bilgileri bilgilendirme amaçlıdır. Güncel fiyat, stok ve teknik ayrıntılar için resmî marka sitelerini kontrol et.
+  <p>© 2026 Telefon Dünyası</p>
+  <p>Ürün görselleri harici kaynaklardan yüklenir.</p>
 </footer>
 
 <script>
 const phones = [
   {
+    id: 1,
     brand: "Apple",
     name: "iPhone 17 Pro Max",
-    storage: "Pro serisi · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "Büyük ekran",
+    storage: "256 GB ve üzeri",
+    screen: "6,9 inç",
     camera: "Pro kamera sistemi",
-    type: "Pro",
-    url: "https://www.apple.com/tr/iphone/"
+    image: "https://deeptechdrop.com/media/downloads/apple-iphone-17-pro-max/apple-iphone-17-pro-max-front-back-1.webp"
   },
   {
+    id: 2,
     brand: "Apple",
     name: "iPhone 17",
-    storage: "Standart seri · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "6 inç sınıfı",
+    storage: "256 GB ve üzeri",
+    screen: "6,3 inç",
     camera: "Çift kamera",
-    type: "Standart",
-    url: "https://www.apple.com/tr/iphone/"
+    image: "https://youget.pt/245640-large_default/apple-iphone-17-63-256gb-verde-salvia.jpg"
   },
   {
+    id: 3,
     brand: "Apple",
     name: "iPhone 16",
-    storage: "Önceki nesil · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "6 inç sınıfı",
+    storage: "128 GB ve üzeri",
+    screen: "6,1 inç",
     camera: "Çift kamera",
-    type: "Standart",
-    url: "https://www.apple.com/tr/iphone/"
+    image: "https://www.costco.com.tw/medias/sys_master/images/h77/h1c/274498548203550.jpg"
   },
   {
+    id: 4,
     brand: "Samsung",
     name: "Galaxy S26 Ultra",
-    storage: "S serisi · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "Büyük ekran",
-    camera: "Ultra kamera sistemi",
-    type: "Ultra",
-    url: "https://www.samsung.com/tr/smartphones/"
+    storage: "256 GB ve üzeri",
+    screen: "6,9 inç",
+    camera: "200 MP ana kamera",
+    image: "https://smartkoshk.com/cdn/shop/files/uk-galaxy-s26-ultra-s948-577114-sm-s948bzkgeub-550747263.png?v=1772052040&width=1920"
   },
   {
+    id: 5,
     brand: "Samsung",
     name: "Galaxy S26",
-    storage: "S serisi · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "Kompakt amiral gemisi",
-    camera: "Çoklu kamera",
-    type: "Standart",
-    url: "https://www.samsung.com/tr/smartphones/"
+    storage: "256 GB ve üzeri",
+    screen: "6,3 inç",
+    camera: "50 MP ana kamera",
+    image: "https://altel.kz/images/eshop/1774379148-Samsung%20S26%20Cobalt%20Violet%20%282%29.png"
   },
   {
+    id: 6,
     brand: "Samsung",
-    name: "Galaxy A56",
-    storage: "A serisi · Depolama seçeneklerini resmî siteden kontrol et",
-    screen: "Büyük ekran",
-    camera: "Çoklu kamera",
-    type: "Günlük kullanım",
-    url: "https://www.samsung.com/tr/smartphones/"
+    name: "Galaxy A56 5G",
+    storage: "128 / 256 GB",
+    screen: "6,7 inç",
+    camera: "Üçlü arka kamera",
+    image: "https://mobileplanet.ua/uploads/product/2025-3-14/samsung-galaxy-a56-5g-8-256gb-awesome-graphite-sm-3387041.webp"
   }
 ];
 
-let selectedBrand = "Tümü";
+let cart = [];
 
-function escapeHTML(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;"
-  })[char]);
-}
+const productsEl = document.getElementById("products");
+const searchEl = document.getElementById("search");
+const brandEl = document.getElementById("brand");
 
-function phoneArt(phone, index) {
-  const colors = ["", "silver", "black", "purple", "green", "gold"];
-  const color = colors[index % colors.length];
-  const samsung = phone.brand === "Samsung";
+function renderProducts() {
+  const term = searchEl.value.toLocaleLowerCase("tr");
+  const brand = brandEl.value;
 
-  return `
-    <div class="phone-stage ${samsung ? "samsung" : ""}">
-      <div class="phone ${color}"></div>
-      ${samsung ? `
-        <div class="phone-back">
-          <div class="lenses"><i></i><i></i><i></i></div>
-        </div>` : ""}
-      <div class="phone-caption">${escapeHTML(phone.brand.toUpperCase())}</div>
-    </div>`;
-}
-
-function render() {
-  const query = document.getElementById("search").value.trim().toLowerCase();
-
-  const filtered = phones.filter(phone => {
-    const brandMatch = selectedBrand === "Tümü" || phone.brand === selectedBrand;
-    const queryMatch = (phone.brand + " " + phone.name + " " + phone.storage)
-      .toLowerCase().includes(query);
-    return brandMatch && queryMatch;
-  });
-
-  document.getElementById("count").textContent = filtered.length + " model";
-
-  const grid = document.getElementById("phones");
+  const filtered = phones.filter(phone =>
+    phone.name.toLocaleLowerCase("tr").includes(term) &&
+    (brand === "Tümü" || phone.brand === brand)
+  );
 
   if (!filtered.length) {
-    grid.innerHTML = '<div class="empty">Bu aramayla eşleşen model bulunamadı. Başka bir model dene.</div>';
+    productsEl.innerHTML = "<p>Aramana uygun telefon bulunamadı.</p>";
     return;
   }
 
-  grid.innerHTML = filtered.map(phone => {
-    const index = phones.indexOf(phone);
-
-    return `
-      <article class="card">
-        ${phoneArt(phone, index)}
-        <div class="card-body">
-          <div class="brand">${phone.brand === "Apple" ? "🍎 APPLE" : "SAMSUNG GALAXY"}</div>
-          <h3>${escapeHTML(phone.name)}</h3>
-          <div class="storage">${escapeHTML(phone.storage)}</div>
-          <div class="specs">
-            <div>
-              <div class="spec-label">Ekran</div>
-              <div class="spec-value">${escapeHTML(phone.screen)}</div>
-            </div>
-            <div>
-              <div class="spec-label">Kamera</div>
-              <div class="spec-value">${escapeHTML(phone.camera)}</div>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="details-btn" data-detail="${index}">Telefon bilgileri</button>
-            <a class="official" href="${phone.url}" target="_blank" rel="noopener noreferrer">Resmî sayfayı aç ↗</a>
-          </div>
+  productsEl.innerHTML = filtered.map(phone => `
+    <article class="card">
+      <div class="photo">
+        <img
+          src="${phone.image}"
+          alt="${phone.name}"
+          loading="lazy"
+          onerror="this.alt='Fotoğraf yüklenemedi';this.style.display='none';this.parentElement.innerHTML='<p>Fotoğraf yüklenemedi</p>';"
+        >
+      </div>
+      <div class="info">
+        <div class="brand">${phone.brand}</div>
+        <h3>${phone.name}</h3>
+        <div class="spec">
+          Depolama: ${phone.storage}<br>
+          Ekran: ${phone.screen}<br>
+          Kamera: ${phone.camera}
         </div>
-      </article>`;
-  }).join("");
-
-  grid.querySelectorAll("[data-detail]").forEach(button => {
-    button.addEventListener("click", () => {
-      const phone = phones[Number(button.dataset.detail)];
-      alert(
-        phone.name + "\n\nMarka: " + phone.brand +
-        "\nEkran: " + phone.screen +
-        "\nKamera: " + phone.camera +
-        "\n\nGüncel teknik özellikler ve fiyatlar için resmî marka sayfasını aç."
-      );
-    });
-  });
+        <button class="add" onclick="addToCart(${phone.id})">
+          🛒 Sepete Ekle
+        </button>
+      </div>
+    </article>
+  `).join("");
 }
 
-function fillCompareSelects() {
-  const options = phones.map((phone, index) =>
-    `<option value="${index}">${escapeHTML(phone.name)}</option>`
-  ).join("");
+function addToCart(id) {
+  const phone = phones.find(item => item.id === id);
+  const existing = cart.find(item => item.id === id);
 
-  document.getElementById("firstPhone").innerHTML = options;
-  document.getElementById("secondPhone").innerHTML = options;
-  document.getElementById("secondPhone").selectedIndex = 3;
-  compare();
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({...phone, quantity: 1});
+  }
+
+  renderCart();
 }
 
-function compare() {
-  const first = phones[Number(document.getElementById("firstPhone").value)];
-  const second = phones[Number(document.getElementById("secondPhone").value)];
-
-  document.getElementById("comparison").innerHTML = `
-    <strong>${escapeHTML(first.name)}</strong><br>
-    Marka: ${escapeHTML(first.brand)}<br>
-    Ekran: ${escapeHTML(first.screen)}<br>
-    Kamera: ${escapeHTML(first.camera)}
-    <hr style="border:0;border-top:1px solid #dce3ef;margin:14px 0">
-    <strong>${escapeHTML(second.name)}</strong><br>
-    Marka: ${escapeHTML(second.brand)}<br>
-    Ekran: ${escapeHTML(second.screen)}<br>
-    Kamera: ${escapeHTML(second.camera)}
-  `;
+function removeFromCart(id) {
+  cart = cart.filter(item => item.id !== id);
+  renderCart();
 }
 
-document.getElementById("search").addEventListener("input", render);
+function clearCart() {
+  cart = [];
+  renderCart();
+}
 
-document.querySelectorAll(".filter").forEach(button => {
-  button.addEventListener("click", () => {
-    selectedBrand = button.dataset.brand;
-    document.querySelectorAll(".filter").forEach(item =>
-      item.classList.toggle("active", item === button)
-    );
-    render();
-  });
-});
+function renderCart() {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById("cartCount").textContent = count;
 
-document.getElementById("firstPhone").addEventListener("change", compare);
-document.getElementById("secondPhone").addEventListener("change", compare);
+  const itemsEl = document.getElementById("cartItems");
+  const totalEl = document.getElementById("cartTotal");
 
-render();
-fillCompareSelects();
+  if (cart.length === 0) {
+    itemsEl.innerHTML = '<p class="empty">Sepetin henüz boş.</p>';
+    totalEl.innerHTML = "<strong>Sepetteki ürün adedi: 0</strong>";
+    return;
+  }
+
+  itemsEl.innerHTML = cart.map(item => `
+    <div class="cart-row">
+      <div>
+        <strong>${item.name}</strong><br>
+        <span>Adet: ${item.quantity}</span>
+      </div>
+      <button class="remove" onclick="removeFromCart(${item.id})">
+        Kaldır
+      </button>
+    </div>
+  `).join("");
+
+  totalEl.innerHTML = `<strong>Sepetteki ürün adedi: ${count}</strong>`;
+}
+
+function goProducts() {
+  document.getElementById("products").scrollIntoView({behavior:"smooth"});
+}
+
+function goCart() {
+  document.getElementById("cart").scrollIntoView({behavior:"smooth"});
+}
+
+searchEl.addEventListener("input", renderProducts);
+brandEl.addEventListener("change", renderProducts);
+
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
