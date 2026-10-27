@@ -4,56 +4,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Telefon Dünyası</title>
+<title>Telefon Dünyası | Telefon ve Teknoloji</title>
+<meta name="description" content="Telefon Dünyası: Telefon modellerini keşfet, fiyatları incele ve hediye paketlerini gör.">
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#f3f5f9;color:#172033}
-header{background:#111827;color:white;padding:24px 16px;text-align:center}
-header h1{margin:0 0 8px;font-size:30px}
-header p{margin:0;color:#d1d5db}
-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-button,select,input{font:inherit}
-nav button,.filter button{border:0;border-radius:10px;padding:10px 14px;cursor:pointer}
-nav button{background:#374151;color:white}
-main{max-width:1100px;margin:auto;padding:20px 14px}
-.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.tools input,.tools select{flex:1;min-width:150px;padding:12px;border:1px solid #d1d5db;border-radius:10px;background:white}
-h2{margin-top:24px}
+header{background:linear-gradient(135deg,#111827,#1d4ed8);color:white;text-align:center;padding:28px 14px}
+header h1{font-size:30px;margin:0 0 8px}
+header p{margin:0;color:#e5e7eb}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{cursor:pointer;font:inherit}
+nav button{border:0;border-radius:10px;padding:11px 16px;background:#ffffff20;color:white}
+main{max-width:1100px;margin:auto;padding:18px 14px}
+h2{margin:24px 0 16px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.tools input,.tools select{flex:1;min-width:145px;padding:12px;border:1px solid #cbd5e1;border-radius:10px;background:white}
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px #10182812}
-.photo{height:240px;background:white;display:flex;align-items:center;justify-content:center;padding:12px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #17203312}
+.photo{height:225px;display:flex;align-items:center;justify-content:center;padding:12px;background:#fff}
 .photo img{width:100%;height:100%;object-fit:contain}
 .info{padding:16px}
-.brand{font-size:12px;color:#64748b;font-weight:bold;text-transform:uppercase}
-.info h3{margin:8px 0;font-size:19px}
-.spec{font-size:14px;line-height:1.7;color:#475569;min-height:48px}
-.add{width:100%;border:0;border-radius:10px;padding:12px;background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+.brand{font-size:12px;font-weight:bold;color:#64748b;text-transform:uppercase}
+.info h3{font-size:19px;margin:8px 0}
+.price{font-size:24px;font-weight:bold;color:#166534;margin:12px 0}
+.gift{background:#fff7ed;border:1px solid #fed7aa;border-radius:11px;padding:10px;margin:12px 0;color:#9a3412;font-size:13px;line-height:1.7}
+.spec{font-size:13px;line-height:1.8;color:#475569}
+.add{width:100%;border:0;border-radius:10px;padding:13px;background:#2563eb;color:white;font-weight:bold;margin-top:12px}
 .add:active{background:#1d4ed8}
-.cart{background:white;border-radius:16px;padding:16px;margin-top:26px;box-shadow:0 4px 16px #10182812}
-.cart-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #e5e7eb;padding:12px 0}
-.remove{border:0;border-radius:8px;background:#fee2e2;color:#991b1b;padding:8px;cursor:pointer}
-.clear{border:0;border-radius:10px;padding:10px;background:#374151;color:white;cursor:pointer}
-.note{font-size:13px;color:#64748b;line-height:1.6}
-footer{text-align:center;background:#111827;color:#d1d5db;padding:22px;margin-top:30px}
-.empty{color:#64748b}
-@media(max-width:480px){header h1{font-size:25px}.photo{height:210px}}
+.cart{background:white;padding:18px;border-radius:16px;margin-top:28px;box-shadow:0 5px 20px #17203312}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #e5e7eb}
+.remove{border:0;border-radius:8px;background:#fee2e2;color:#991b1b;padding:9px}
+.total{font-size:20px;font-weight:bold;margin-top:18px}
+.clear{border:0;border-radius:9px;background:#374151;color:white;padding:10px 14px}
+.note{font-size:12px;line-height:1.7;color:#64748b}
+footer{margin-top:28px;background:#111827;color:#d1d5db;text-align:center;padding:22px;font-size:13px}
+@media(max-width:480px){header h1{font-size:25px}.photo{height:205px}}
 </style>
 </head>
 <body>
-
 <header>
   <h1>📱 Telefon Dünyası</h1>
-  <p>Yeni telefonları keşfet, karşılaştır ve sepetine ekle.</p>
+  <p>Yeni telefonlar, güzel fırsatlar ve hediye paketleri!</p>
   <nav>
-    <button onclick="goProducts()">Telefonlar</button>
+    <button onclick="goProducts()">📱 Telefonlar</button>
     <button onclick="goCart()">🛒 Sepetim (<span id="cartCount">0</span>)</button>
   </nav>
 </header>
 
 <main>
-  <h2>Telefonları keşfet</h2>
+  <h2>Telefon modelleri</h2>
   <div class="tools">
-    <input id="search" type="search" placeholder="Telefon modeli ara...">
+    <input id="search" type="search" placeholder="Telefon ara...">
     <select id="brand">
       <option value="Tümü">Tüm markalar</option>
       <option value="Apple">Apple</option>
@@ -65,184 +66,125 @@ footer{text-align:center;background:#111827;color:#d1d5db;padding:22px;margin-to
 
   <section class="cart" id="cart">
     <h2>🛒 Sepetim</h2>
-    <div id="cartItems"><p class="empty">Sepetin henüz boş.</p></div>
-    <p id="cartTotal"><strong>Sepetteki ürün adedi: 0</strong></p>
+    <div id="cartItems"><p>Sepetin henüz boş.</p></div>
+    <div class="total" id="cartTotal">Toplam: 0 TL</div>
+    <p class="note">Sepetteki hediyeler: Akıllı saat ve Bluetooth kulaklık.</p>
     <button class="clear" onclick="clearCart()">Sepeti temizle</button>
-    <p class="note">Bu, tarayıcıda çalışan bir demo sepettir. Gerçek sipariş veya ödeme oluşturmaz.</p>
+    <p class="note">Bu sepet deneme amaçlıdır. Henüz sipariş veya ödeme almaz.</p>
   </section>
 </main>
 
 <footer>
+  <strong>Telefon Dünyası</strong>
+  <p>Telefon ve teknoloji dünyasına hoş geldin!</p>
   <p>© 2026 Telefon Dünyası</p>
-  <p>Ürün görselleri harici kaynaklardan yüklenir.</p>
 </footer>
 
 <script>
 const phones = [
-  {
-    id: 1,
-    brand: "Apple",
-    name: "iPhone 17 Pro Max",
-    storage: "256 GB ve üzeri",
-    screen: "6,9 inç",
-    camera: "Pro kamera sistemi",
-    image: "https://deeptechdrop.com/media/downloads/apple-iphone-17-pro-max/apple-iphone-17-pro-max-front-back-1.webp"
-  },
-  {
-    id: 2,
-    brand: "Apple",
-    name: "iPhone 17",
-    storage: "256 GB ve üzeri",
-    screen: "6,3 inç",
-    camera: "Çift kamera",
-    image: "https://youget.pt/245640-large_default/apple-iphone-17-63-256gb-verde-salvia.jpg"
-  },
-  {
-    id: 3,
-    brand: "Apple",
-    name: "iPhone 16",
-    storage: "128 GB ve üzeri",
-    screen: "6,1 inç",
-    camera: "Çift kamera",
-    image: "https://www.costco.com.tw/medias/sys_master/images/h77/h1c/274498548203550.jpg"
-  },
-  {
-    id: 4,
-    brand: "Samsung",
-    name: "Galaxy S26 Ultra",
-    storage: "256 GB ve üzeri",
-    screen: "6,9 inç",
-    camera: "200 MP ana kamera",
-    image: "https://smartkoshk.com/cdn/shop/files/uk-galaxy-s26-ultra-s948-577114-sm-s948bzkgeub-550747263.png?v=1772052040&width=1920"
-  },
-  {
-    id: 5,
-    brand: "Samsung",
-    name: "Galaxy S26",
-    storage: "256 GB ve üzeri",
-    screen: "6,3 inç",
-    camera: "50 MP ana kamera",
-    image: "https://altel.kz/images/eshop/1774379148-Samsung%20S26%20Cobalt%20Violet%20%282%29.png"
-  },
-  {
-    id: 6,
-    brand: "Samsung",
-    name: "Galaxy A56 5G",
-    storage: "128 / 256 GB",
-    screen: "6,7 inç",
-    camera: "Üçlü arka kamera",
-    image: "https://mobileplanet.ua/uploads/product/2025-3-14/samsung-galaxy-a56-5g-8-256gb-awesome-graphite-sm-3387041.webp"
-  }
+  {id:1,brand:"Apple",name:"iPhone 17 Pro Max",price:119999,storage:"256 GB ve üzeri",screen:"6,9 inç",image:"https://deeptechdrop.com/media/downloads/apple-iphone-17-pro-max/apple-iphone-17-pro-max-front-back-1.webp"},
+  {id:2,brand:"Apple",name:"iPhone 17",price:99999,storage:"256 GB ve üzeri",screen:"6,3 inç",image:"https://youget.pt/245640-large_default/apple-iphone-17-63-256gb-verde-salvia.jpg"},
+  {id:3,brand:"Apple",name:"iPhone 16",price:85999,storage:"128 GB ve üzeri",screen:"6,1 inç",image:"https://www.costco.com.tw/medias/sys_master/images/h77/h1c/274498548203550.jpg"},
+  {id:4,brand:"Samsung",name:"Galaxy S26 Ultra",price:132999,storage:"256 GB ve üzeri",screen:"6,9 inç",image:"https://smartkoshk.com/cdn/shop/files/uk-galaxy-s26-ultra-s948-577114-sm-s948bzkgeub-550747263.png?v=1772052040&width=1920"},
+  {id:5,brand:"Samsung",name:"Galaxy S26",price:86999,storage:"256 GB ve üzeri",screen:"6,3 inç",image:"https://altel.kz/images/eshop/1774379148-Samsung%20S26%20Cobalt%20Violet%20%282%29.png"},
+  {id:6,brand:"Samsung",name:"Galaxy A56 5G",price:26999,storage:"128 / 256 GB",screen:"6,7 inç",image:"https://mobileplanet.ua/uploads/product/2025-3-14/samsung-galaxy-a56-5g-8-256gb-awesome-graphite-sm-3387041.webp"}
 ];
 
-let cart = [];
+let cart=[];
+const money = value => value.toLocaleString("tr-TR")+" TL";
 
-const productsEl = document.getElementById("products");
-const searchEl = document.getElementById("search");
-const brandEl = document.getElementById("brand");
-
-function renderProducts() {
-  const term = searchEl.value.toLocaleLowerCase("tr");
-  const brand = brandEl.value;
-
-  const filtered = phones.filter(phone =>
-    phone.name.toLocaleLowerCase("tr").includes(term) &&
-    (brand === "Tümü" || phone.brand === brand)
+function renderProducts(){
+  const term=document.getElementById("search").value.toLocaleLowerCase("tr");
+  const brand=document.getElementById("brand").value;
+  const list=phones.filter(p=>
+    p.name.toLocaleLowerCase("tr").includes(term) &&
+    (brand==="Tümü"||p.brand===brand)
   );
+  const el=document.getElementById("products");
 
-  if (!filtered.length) {
-    productsEl.innerHTML = "<p>Aramana uygun telefon bulunamadı.</p>";
+  if(!list.length){
+    el.innerHTML="<p>Aramana uygun telefon bulunamadı.</p>";
     return;
   }
 
-  productsEl.innerHTML = filtered.map(phone => `
+  el.innerHTML=list.map(p=>`
     <article class="card">
       <div class="photo">
-        <img
-          src="${phone.image}"
-          alt="${phone.name}"
-          loading="lazy"
-          onerror="this.alt='Fotoğraf yüklenemedi';this.style.display='none';this.parentElement.innerHTML='<p>Fotoğraf yüklenemedi</p>';"
-        >
+        <img src="${p.image}" alt="${p.name}" loading="lazy"
+        onerror="this.style.display='none';this.parentElement.innerHTML='<p>Fotoğraf yüklenemedi</p>'">
       </div>
       <div class="info">
-        <div class="brand">${phone.brand}</div>
-        <h3>${phone.name}</h3>
-        <div class="spec">
-          Depolama: ${phone.storage}<br>
-          Ekran: ${phone.screen}<br>
-          Kamera: ${phone.camera}
+        <div class="brand">${p.brand}</div>
+        <h3>${p.name}</h3>
+        <div class="price">${money(p.price)}</div>
+        <div class="gift">
+          🎁 <strong>HEDİYE PAKETİ</strong><br>
+          ⌚ Akıllı saat<br>
+          🎧 Bluetooth kulaklık
         </div>
-        <button class="add" onclick="addToCart(${phone.id})">
-          🛒 Sepete Ekle
-        </button>
+        <div class="spec">
+          Depolama: ${p.storage}<br>
+          Ekran: ${p.screen}
+        </div>
+        <button class="add" onclick="addToCart(${p.id})">🛒 Sepete Ekle</button>
       </div>
     </article>
   `).join("");
 }
 
-function addToCart(id) {
-  const phone = phones.find(item => item.id === id);
-  const existing = cart.find(item => item.id === id);
-
-  if (existing) {
-    existing.quantity++;
-  } else {
-    cart.push({...phone, quantity: 1});
-  }
-
+function addToCart(id){
+  const p=phones.find(x=>x.id===id);
+  const item=cart.find(x=>x.id===id);
+  if(item)item.quantity++;
+  else cart.push({...p,quantity:1});
   renderCart();
 }
 
-function removeFromCart(id) {
-  cart = cart.filter(item => item.id !== id);
+function removeFromCart(id){
+  cart=cart.filter(x=>x.id!==id);
   renderCart();
 }
 
-function clearCart() {
-  cart = [];
+function clearCart(){
+  cart=[];
   renderCart();
 }
 
-function renderCart() {
-  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-  document.getElementById("cartCount").textContent = count;
+function renderCart(){
+  const count=cart.reduce((sum,p)=>sum+p.quantity,0);
+  const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
+  document.getElementById("cartCount").textContent=count;
+  document.getElementById("cartTotal").textContent="Toplam: "+money(total);
 
-  const itemsEl = document.getElementById("cartItems");
-  const totalEl = document.getElementById("cartTotal");
-
-  if (cart.length === 0) {
-    itemsEl.innerHTML = '<p class="empty">Sepetin henüz boş.</p>';
-    totalEl.innerHTML = "<strong>Sepetteki ürün adedi: 0</strong>";
+  const el=document.getElementById("cartItems");
+  if(!cart.length){
+    el.innerHTML="<p>Sepetin henüz boş.</p>";
     return;
   }
 
-  itemsEl.innerHTML = cart.map(item => `
+  el.innerHTML=cart.map(p=>`
     <div class="cart-row">
       <div>
-        <strong>${item.name}</strong><br>
-        <span>Adet: ${item.quantity}</span>
+        <strong>${p.name}</strong><br>
+        Adet: ${p.quantity}<br>
+        <span>${money(p.price*p.quantity)}</span><br>
+        <small>🎁 Akıllı saat + Bluetooth kulaklık</small>
       </div>
-      <button class="remove" onclick="removeFromCart(${item.id})">
-        Kaldır
-      </button>
+      <button class="remove" onclick="removeFromCart(${p.id})">Kaldır</button>
     </div>
   `).join("");
-
-  totalEl.innerHTML = `<strong>Sepetteki ürün adedi: ${count}</strong>`;
 }
 
-function goProducts() {
+function goProducts(){
   document.getElementById("products").scrollIntoView({behavior:"smooth"});
 }
 
-function goCart() {
+function goCart(){
   document.getElementById("cart").scrollIntoView({behavior:"smooth"});
 }
 
-searchEl.addEventListener("input", renderProducts);
-brandEl.addEventListener("change", renderProducts);
-
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("brand").addEventListener("change",renderProducts);
 renderProducts();
 renderCart();
 </script>
