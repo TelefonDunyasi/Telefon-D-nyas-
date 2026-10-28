@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://telefondunyasi.github.io/Telefon-D-nyas-/sitemap.xml
