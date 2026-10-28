@@ -1,213 +1,77 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="wams9tv0JlSw1e7ZMDxbLEEjN_ANLnNqLgihBltuCdo">
-<meta name="theme-color" content="#080808">
-<title>Telefon Dünyası | Premium Mağaza</title>
+<meta name="theme-color" content="#101012">
+<title>Telefon Dünyası | Akıllı Alışveriş</title>
 <style>
-:root{--gold:#e5c16b;--bg:#080808;--card:#151515;--text:#f7f3e8;--muted:#b3ad9f}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
-header{background:#101010;border-bottom:1px solid #594622;padding:16px;position:sticky;top:0;z-index:5}
-.wrap{max-width:1200px;width:94%;margin:auto}
-.head{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{font-size:21px;font-weight:900;color:var(--gold)}
-.logo small{display:block;font-size:10px;letter-spacing:3px;color:white}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-.btn{border:1px solid #725b2b;background:#202020;color:white;padding:11px 14px;border-radius:10px}
-.gold{background:linear-gradient(120deg,#f3d98d,#c99b37);color:#15110a;font-weight:bold;border:0}
-.hero{padding:48px 0 30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-.hero h1{font-size:clamp(35px,6vw,65px);line-height:1.04;margin:12px 0}
-.hero h1 span{color:var(--gold)}
-.hero p{color:var(--muted);line-height:1.7}
-.hero-art{min-height:245px;border:1px solid #594622;border-radius:22px;background:radial-gradient(circle,#4a3817,#151515 60%);display:grid;place-items:center;font-size:90px}
-.section{padding:24px 0 42px}
-h2{font-size:27px}
-.tools{display:grid;grid-template-columns:1fr 220px;gap:10px;margin:20px 0}
-.field{width:100%;padding:13px;background:#171717;border:1px solid #484033;color:white;border-radius:10px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
-.chip{background:#171717;color:white;border:1px solid #454033;border-radius:30px;padding:9px 15px}
-.chip.active{background:#443317;color:var(--gold)}
-.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.product{background:var(--card);border:1px solid #302b20;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.photo{height:220px;padding:12px;background:#fff;display:grid;place-items:center}
-.photo img{width:100%;height:100%;object-fit:contain}
-.details{padding:14px;display:flex;flex-direction:column;gap:9px;flex:1}
-.brand{color:var(--gold);font-size:12px;font-weight:bold;text-transform:uppercase}
-.name{font-size:17px;font-weight:bold;min-height:40px}
-.price{font-size:21px;font-weight:bold;color:var(--gold)}
-.note{font-size:11px;color:var(--muted);line-height:1.5}
-.actions{display:flex;gap:7px;margin-top:auto}
-.actions button{flex:1;padding:10px 6px}
-.panel{background:#141414;border:1px solid #393020;border-radius:15px;padding:18px;margin-bottom:14px}
-footer{border-top:1px solid #44371e;padding:30px 0;color:var(--muted);line-height:1.8}
-#cart{display:none;position:fixed;inset:0;background:#000c;z-index:10;justify-content:flex-end}
-.drawer{background:#111;width:min(480px,100%);height:100%;overflow:auto;padding:20px;border-left:1px solid var(--gold)}
-.cartitem{padding:12px 0;border-bottom:1px solid #333;display:flex;justify-content:space-between;gap:12px}
-.qty{display:flex;gap:10px;align-items:center;margin-top:8px}
-.qty button{background:#333;color:white;border:0;border-radius:6px;padding:5px 10px}
-label{display:block;margin:12px 0;color:#ddd}
-label input[type=checkbox]{accent-color:var(--gold)}
-.total{font-size:22px;color:var(--gold);font-weight:bold;margin:18px 0}
-.empty{text-align:center;color:var(--muted);padding:30px}
-@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:650px){
- .hero{grid-template-columns:1fr;padding-top:30px}
- .hero-art{min-height:150px;font-size:65px}
- .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
- .photo{height:160px}
- .details{padding:10px}
- .name{font-size:14px}
- .price{font-size:17px}
- .actions{flex-direction:column}
- .tools{grid-template-columns:1fr}
- .logo{font-size:17px}
-}
-@media(max-width:350px){.products{grid-template-columns:1fr}}
+:root{--bg:#0b0b0d;--panel:#151518;--panel2:#1d1d21;--gold:#e8c46b;--gold2:#c99a35;--muted:#b9b7b0;--line:#39342a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f8f6ef;font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--gold)}.wrap{width:min(1180px,94%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#101012f5;border-bottom:1px solid #493c20;backdrop-filter:blur(12px)}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0}.logo{font-weight:900;letter-spacing:.5px;color:var(--gold);font-size:18px}.logo small{display:block;font-size:9px;letter-spacing:2.6px;color:white}.head-actions{display:flex;align-items:center;gap:8px}.btn{border:1px solid #64512a;background:#242426;color:white;padding:10px 13px;border-radius:11px;font-weight:700}.btn:hover{filter:brightness(1.12)}.gold{background:linear-gradient(120deg,#f5dfa0,#c99a35);color:#17130a;border:0}.nav{display:flex;gap:7px;overflow:auto;padding:0 0 11px;scrollbar-width:thin}.nav button{white-space:nowrap;border:1px solid #39342a;background:#19191c;color:#f5f1e7;border-radius:999px;padding:8px 13px}.nav button.active{background:#302715;color:var(--gold);border-color:var(--gold)}
+.view{display:none}.view.active{display:block}.hero{padding:38px 0 26px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}.eyebrow{color:var(--gold);letter-spacing:2px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(35px,6vw,64px);line-height:1.04;margin:12px 0}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);max-width:600px}.hero-art{min-height:245px;border:1px solid #51401f;border-radius:24px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#59451d,#171719 62%);font-size:90px}.section{padding:22px 0 36px}h2{font-size:26px;margin:0 0 6px}h3{margin:8px 0}.muted,.note{color:var(--muted)}.tools{display:grid;grid-template-columns:1fr 220px;gap:10px;margin:18px 0}.field{width:100%;padding:12px;background:#18181b;color:white;border:1px solid #4a453a;border-radius:10px}.field:focus{outline:2px solid #a9883e;outline-offset:1px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}.chip{border:1px solid #454039;background:#19191b;color:white;border-radius:99px;padding:8px 13px}.chip.active{border-color:var(--gold);color:var(--gold);background:#302715}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.product{background:var(--panel);border:1px solid #302c24;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}.photo{height:215px;background:#fff;display:grid;place-items:center;padding:10px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:contain}.photo .fallback{display:none;color:#222;text-align:center;font-size:42px}.details{padding:13px;display:flex;flex-direction:column;gap:8px;flex:1}.brand{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:1px;text-transform:uppercase}.name{font-weight:750;min-height:45px}.price{font-size:20px;font-weight:850;color:var(--gold)}.note{font-size:11px;line-height:1.45}.actions{display:flex;gap:7px;margin-top:auto}.actions button{flex:1;padding:9px 5px;font-size:13px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}.feature b{color:var(--gold)}.label{display:block;margin:12px 0;color:#e8e5dc}.checkrow{display:flex;align-items:center;gap:9px}.checkrow input{accent-color:var(--gold);width:18px;height:18px}.small{font-size:12px;color:var(--muted)}.total{font-size:23px;font-weight:850;color:var(--gold);margin:18px 0}.empty{text-align:center;color:var(--muted);padding:28px}.cartitem{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #333}.qty{display:flex;gap:10px;align-items:center;margin:8px 0}.qty button{border:0;border-radius:7px;background:#393939;color:white;padding:4px 11px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:var(--gold);font-size:12px}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gift-card{border:1px solid var(--line);border-radius:14px;padding:17px;background:var(--panel)}.gift-card h3{color:var(--gold)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}footer{border-top:1px solid #40351f;padding:25px 0;color:var(--muted);margin-top:25px}.hidden{display:none!important}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){.head{align-items:flex-start}.hero{grid-template-columns:1fr;padding-top:25px}.hero-art{min-height:130px;font-size:60px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo{height:155px}.details{padding:10px}.name{font-size:14px;min-height:40px}.price{font-size:17px}.actions{flex-direction:column}.tools{grid-template-columns:1fr}.logo{font-size:15px}.feature-grid,.gift-grid,.contact-grid{grid-template-columns:1fr}.head .btn{padding:8px 10px}.nav{margin-right:-3%;padding-right:3%}}@media(max-width:350px){.products{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap head">
-  <div class="logo">✦ TELEFON DÜNYASI<small>PREMIUM MOBİL MAĞAZA</small></div>
-  <button class="btn gold" onclick="openCart()">🛒 Sepet (<span id="count">0</span>)</button>
- </div>
-</header>
-
+<header><div class="wrap">
+ <div class="head"><div class="logo">✦ TELEFON DÜNYASI<small>TEKNOLOJİ • TARZ • KEŞİF</small></div><div class="head-actions"><button class="btn gold" onclick="showView('cart')">🛒 Sepet <span id="count">0</span></button></div></div>
+ <nav class="nav" aria-label="Ana menü">
+  <button class="active" data-view="home" onclick="showView('home')">⌂ Ana Sayfa</button>
+  <button data-view="phones" onclick="showView('phones')">📱 Telefonlar</button>
+  <button data-view="gifts" onclick="showView('gifts')">🎁 Hediyeler</button>
+  <button data-view="cart" onclick="showView('cart')">🛒 Sepetim</button>
+  <button data-view="about" onclick="showView('about')">ℹ️ Hakkımızda</button>
+  <button data-view="contact" onclick="showView('contact')">☎️ İletişim</button>
+ </nav>
+</div></header>
 <main class="wrap">
- <section class="hero">
-  <div>
-   <div style="color:var(--gold);letter-spacing:3px">TEKNOLOJİ • TARZ • KEŞİF</div>
-   <h1>Yeni telefonun,<br><span>yeni dünyan.</span></h1>
-   <p>En sevdiğin telefon modellerini keşfet. Ürünlerini seç, sepetini oluştur ve sipariş talebini WhatsApp üzerinden gönder.</p>
-   <button class="btn gold" onclick="document.getElementById('urunler').scrollIntoView({behavior:'smooth'})">Ürünleri keşfet ↓</button>
-  </div>
-  <div class="hero-art">📱 ✨</div>
- </section>
-
- <section class="section" id="urunler">
-  <h2>✦ Telefon koleksiyonu</h2>
-  <p style="color:var(--muted)">Markanı seç veya modelini ara.</p>
-  <div class="tools">
-   <input class="field" id="search" placeholder="🔎 Telefon modeli ara..." oninput="render()">
-   <select class="field" id="brand" onchange="render()">
-    <option value="Tümü">Tüm markalar</option>
-    <option>Apple</option><option>Samsung</option><option>Xiaomi</option>
-   </select>
-  </div>
-  <div class="chips">
-   <button class="chip active" onclick="setBrand('Tümü')">Tümü</button>
-   <button class="chip" onclick="setBrand('Apple')">🍎 Apple</button>
-   <button class="chip" onclick="setBrand('Samsung')">Samsung</button>
-   <button class="chip" onclick="setBrand('Xiaomi')">Xiaomi / Redmi</button>
-  </div>
-  <div class="products" id="products"></div>
-  <p class="note">Fiyatlar çevrim içi kaynaklarda görülen örnek liste fiyatlarıdır. Depolama kapasitesi, garanti, satıcı ve kampanyaya göre değişebilir. Satıştan önce kesin fiyat ve stok teyidi alınır.</p>
- </section>
-
- <section class="section">
-  <h2>Alışveriş deneyimin</h2>
-  <div class="panel">🛒 <b>Kolay sepet</b><p class="note">Ürün ekle, miktarı değiştir ve siparişini hazırla.</p></div>
-  <div class="panel">🎁 <b>Hediye seçeneği</b><p class="note">Hediye paketi ve kişisel not ekleyebilirsin.</p></div>
-  <div class="panel">💬 <b>WhatsApp sipariş talebi</b><p class="note">Sipariş mesajın hazırlanır. WhatsApp açıldığında mesajı sen gönderirsin.</p></div>
- </section>
+<section class="view active" id="view-home">
+ <div class="hero"><div><div class="eyebrow">YENİ NESİL MOBİL ALIŞVERİŞ</div><h1>Yeni telefonun,<br><span>yeni dünyan.</span></h1><p>Telefonunu keşfet, sepetini oluştur, hediye seçeneklerini belirle ve sipariş talebini WhatsApp üzerinden ilet.</p><button class="btn gold" onclick="showView('phones')">Telefonları keşfet ↓</button></div><div class="hero-art" aria-label="Telefon görseli">📱 ✨</div></div>
+ <section class="section"><h2>✦ Öne çıkan telefonlar</h2><p class="muted">Popüler modelleri incele, sepete ekle.</p><div class="products" id="featured"></div></section>
+ <section class="section"><h2>Alışverişin kolay olsun</h2><div class="feature-grid"><div class="feature">🛒 <b>Kolay sepet</b><p class="small">Ürün ekle, adedi artır veya azalt, istemediğini çıkar.</p></div><div class="feature">🎁 <b>Hediye seçenekleri</b><p class="small">Telefon markana uygun saat veya kulaklık tercihini belirt.</p></div><div class="feature">💬 <b>WhatsApp siparişi</b><p class="small">Sipariş bilgileri hazırlanır; son gönderimi sen onaylarsın.</p></div></div></section>
+</section>
+<section class="view" id="view-phones"><section class="section"><h2>📱 Telefon koleksiyonu</h2><p class="muted">Markanı seç veya modelini ara.</p><div class="tools"><input class="field" id="search" placeholder="🔎 Telefon modeli ara..." oninput="renderProducts()"><select class="field" id="brand" onchange="renderProducts()"><option value="Tümü">Tüm markalar</option><option>Apple</option><option>Samsung</option><option>Xiaomi</option></select></div><div class="chips"><button class="chip active" onclick="setBrand('Tümü')">Tümü</button><button class="chip" onclick="setBrand('Apple')">🍎 Apple</button><button class="chip" onclick="setBrand('Samsung')">Samsung</button><button class="chip" onclick="setBrand('Xiaomi')">Xiaomi / Redmi</button></div><div class="products" id="products"></div><p class="note">Fiyatlar örnek liste fiyatlarıdır; stok, kapasite, garanti ve güncel satış fiyatı sipariş öncesi WhatsApp üzerinden teyit edilmelidir. Fotoğraflar harici kaynaklardan yüklenir; bağlantı değişirse fotoğraf yerine yedek simge görünür.</p></section></section>
+<section class="view" id="view-gifts"><section class="section"><h2>🎁 Hediye seçenekleri</h2><p class="muted">Hediye tercihlerini sepet ekranından siparişine ekleyebilirsin.</p><div class="gift-grid"><div class="gift-card"><div style="font-size:34px">⌚</div><h3>Akıllı saat</h3><p class="small">Telefon markana uygun saat isteğini sipariş notuna ekle. Model, stok ve uygunluk mağaza tarafından teyit edilir.</p></div><div class="gift-card"><div style="font-size:34px">🎧</div><h3>Kablosuz kulaklık</h3><p class="small">Telefon markana uygun kulaklık isteğini seç. Hediye kampanyası ve stok durumu teyide tabidir.</p></div><div class="gift-card"><div style="font-size:34px">🎀</div><h3>Hediye paketi</h3><p class="small">Sepette hediye paketi seçeneğini işaretle ve dilersen kişisel hediye notu ekle. Paket ücreti 99 TL olarak gösterilir.</p></div></div><p><button class="btn gold" onclick="showView('cart')">Sepet ve hediye tercihlerini aç</button></p></section></section>
+<section class="view" id="view-cart"><section class="section"><h2>🛒 Sepetim ve sipariş</h2><p class="muted">Ürün adetlerini düzenle, müşteri bilgilerini doldur ve WhatsApp sipariş mesajını hazırla.</p><div id="items"></div>
+ <div class="panel"><label class="checkrow"><input type="checkbox" id="giftWrap" onchange="renderCart()"> 🎁 Hediye paketi (+99 TL)</label><label class="label">Hediye notu<textarea class="field" id="giftNote" rows="2" placeholder="Örn. İyi ki doğdun!"></textarea></label></div>
+ <div class="panel"><b>🎁 Markana uygun hediye tercihi</b><p class="small">Hediye talebi sipariş mesajına eklenir; stok ve uygunluk sipariş sırasında teyit edilir.</p><label class="label">Hediye türü<select id="giftType" class="field" onchange="renderCart()"><option value="Hediye istemiyorum">Hediye istemiyorum</option><option value="Aynı markadan akıllı saat">Aynı markadan akıllı saat</option><option value="Aynı markadan kablosuz kulaklık">Aynı markadan kablosuz kulaklık</option><option value="Saat ve kulaklık kampanyası hakkında bilgi">Saat ve kulaklık kampanyası hakkında bilgi</option></select></label><div id="giftBrandInfo" class="small">Telefon markana göre hediye isteğin sipariş mesajına eklenecek.</div></div>
+ <div class="total">Toplam: <span id="total">0 TL</span></div><h3>Müşteri bilgileri</h3><form id="order"><label class="label">Ad soyad *<input class="field" id="customer" autocomplete="name" required></label><label class="label">Telefon numaran *<input class="field" id="phone" type="tel" autocomplete="tel" inputmode="tel" required></label><label class="label">Teslimat adresin *<textarea class="field" id="address" rows="3" autocomplete="street-address" required></textarea></label><label class="label">Ek sipariş notu<textarea class="field" id="extra" rows="2" placeholder="Varsa eklemek istediklerin"></textarea></label><button class="btn gold" style="width:100%" type="submit">WhatsApp ile sipariş gönder ↗</button></form><p class="small">Bu site kart ödemesi almaz. WhatsApp açıldığında mesajı kontrol edip Gönder tuşuna sen basarsın. Fiyatı belirtilmeyen ürünlerin ve hediyelerin tutarı mağaza tarafından teyit edilir.</p></section></section>
+<section class="view" id="view-about"><section class="section"><h2>ℹ️ Hakkımızda</h2><div class="panel"><p><b style="color:var(--gold)">Telefon Dünyası</b>, telefon modellerini inceleyip sipariş talebini kolayca iletebilmen için hazırlanmış bir mağaza vitrini örneğidir.</p><p class="muted">Siparişler WhatsApp üzerinden talep olarak iletilir. Bu web sitesi kendi başına ödeme almaz veya stok doğrulaması yapmaz. Ürün fiyatı, garanti, stok, hediye ve teslimat bilgileri sipariş öncesinde mağaza tarafından onaylanmalıdır.</p></div></section></section>
+<section class="view" id="view-contact"><section class="section"><h2>☎️ İletişim</h2><div class="contact-grid"><div class="panel"><h3>WhatsApp sipariş hattı</h3><p>0541 542 81 09</p><a class="btn gold" href="https://wa.me/905415428109" target="_blank" rel="noopener">WhatsApp'tan yaz ↗</a></div><div class="panel"><h3>Nasıl sipariş verilir?</h3><p class="small">Telefonunu sepete ekle, adetleri ve hediye tercihlerini düzenle, müşteri bilgilerini gir ve WhatsApp sipariş mesajını gönder. Siparişin kesinleşmesi için mağazanın fiyat ve stok onayı gerekir.</p><button class="btn" onclick="showView('cart')">Sepetimi aç</button></div></div></section></section>
 </main>
-
-<div id="cart">
- <div class="drawer">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-   <h2>🛒 Sepetim</h2><button class="btn" onclick="closeCart()">Kapat ✕</button>
-  </div>
-  <div id="items"></div>
-  <label><input type="checkbox" id="gift" onchange="renderCart()"> 🎁 Hediye paketi (99 TL)</label>
-  <label>Hediye notu<textarea class="field" id="giftNote" placeholder="Hediye notun (isteğe bağlı)"></textarea></label>
-  <div class="total">Toplam: <span id="total">0 TL</span></div>
-  <h3>Sipariş bilgileri</h3>
-  <form id="order">
-   <label>Ad soyad *<input class="field" id="customer" required></label>
-   <label>Telefon numaran *<input class="field" id="phone" type="tel" required></label>
-   <label>Teslimat adresin *<textarea class="field" id="address" required></textarea></label>
-   <label>Sipariş notu<textarea class="field" id="extra"></textarea></label>
-   <button class="btn gold" style="width:100%" type="submit">WhatsApp ile sipariş gönder ↗</button>
-  </form>
-  <p class="note">Bu site kart ödemesi almaz. Kesin fiyat, stok ve kargo bilgisi mağaza tarafından teyit edilir.</p>
- </div>
-</div>
-
-<footer><div class="wrap">
- <b style="color:var(--gold)">TELEFON DÜNYASI</b><br>
- WhatsApp: <a style="color:var(--gold)" href="https://wa.me/905415428109">0541 542 81 09</a><br>
- © <span id="year"></span> Telefon Dünyası
-</div></footer>
-
+<footer><div class="wrap"><b style="color:var(--gold)">TELEFON DÜNYASI</b><br>WhatsApp: <a href="https://wa.me/905415428109" target="_blank" rel="noopener">0541 542 81 09</a><br>© <span id="year"></span> Telefon Dünyası</div></footer>
 <script>
+"use strict";
 const WA="905415428109";
 const products=[
- {id:1,brand:"Apple",name:"iPhone 17 Pro Max",price:119999,image:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro-max.jpg",note:"Apple Türkiye başlangıç fiyatı"},
- {id:2,brand:"Apple",name:"iPhone 17 Pro",price:107999,image:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg",note:"Apple Türkiye başlangıç fiyatı"},
- {id:3,brand:"Samsung",name:"Samsung Galaxy S25 Ultra",price:67699,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg",note:"Çevrim içi satıcı fiyatı; teyit gerekli"},
- {id:4,brand:"Samsung",name:"Samsung Galaxy S25",price:45399,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25.jpg",note:"Çevrim içi satıcı fiyatı; teyit gerekli"},
- {id:5,brand:"Samsung",name:"Samsung Galaxy A56",price:26710,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56.jpg",note:"Satıcı ve kapasite teyit edilmeli"},
- {id:6,brand:"Samsung",name:"Samsung Galaxy S24",price:null,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24.jpg",note:"Güncel fiyat WhatsApp'tan sorulmalı"},
- {id:7,brand:"Xiaomi",name:"Redmi Note 14",price:19499,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14.jpg",note:"Satıcı ve kapasite teyit edilmeli"},
- {id:8,brand:"Xiaomi",name:"Redmi Note 14 Pro",price:21999,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro.jpg",note:"Satıcı ve kapasite teyit edilmeli"},
- {id:9,brand:"Xiaomi",name:"POCO X7 Pro",price:null,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",note:"Güncel fiyat WhatsApp'tan sorulmalı"}
+{id:1,brand:"Apple",name:"iPhone 17 Pro Max",price:119999,image:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro-max.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:2,brand:"Apple",name:"iPhone 17 Pro",price:107999,image:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:3,brand:"Apple",name:"iPhone 16",price:69999,image:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:4,brand:"Samsung",name:"Samsung Galaxy S25 Ultra",price:67699,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg",note:"Satıcı ve fiyat teyidi gerekli"},
+{id:5,brand:"Samsung",name:"Samsung Galaxy S25",price:45399,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25.jpg",note:"Satıcı ve fiyat teyidi gerekli"},
+{id:6,brand:"Samsung",name:"Samsung Galaxy A56",price:26710,image:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:7,brand:"Xiaomi",name:"Redmi Note 14",price:19499,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:8,brand:"Xiaomi",name:"Redmi Note 14 Pro",price:21999,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro.jpg",note:"Kapasite ve fiyat teyidi gerekli"},
+{id:9,brand:"Xiaomi",name:"POCO X7 Pro",price:null,image:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",note:"Güncel fiyat WhatsApp'tan sorulmalı"}
 ];
-let cart=JSON.parse(localStorage.getItem("td-cart")||"[]");
-function money(n){return n===null?"Fiyat sor":new Intl.NumberFormat("tr-TR",{style:"currency",currency:"TRY",maximumFractionDigits:0}).format(n)}
-function save(){localStorage.setItem("td-cart",JSON.stringify(cart))}
-function render(){
- const term=document.getElementById("search").value.toLocaleLowerCase("tr-TR");
- const brand=document.getElementById("brand").value;
- document.querySelectorAll(".chip").forEach(b=>b.classList.toggle("active",b.textContent.includes(brand)||brand==="Tümü"&&b.textContent==="Tümü"));
- const list=products.filter(p=>(brand==="Tümü"||p.brand===brand)&&(p.name+" "+p.brand).toLocaleLowerCase("tr-TR").includes(term));
- document.getElementById("products").innerHTML=list.map(p=>`
- <article class="product">
-  <div class="photo"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='📱 <span style=&quot;color:#333&quot;>Fotoğraf yüklenemedi</span>'"></div>
-  <div class="details">
-   <div class="brand">${p.brand}</div><div class="name">${p.name}</div>
-   <div class="price">${money(p.price)}</div>
-   <div class="note">${p.note}</div>
-   <div class="actions">
-    <button class="btn gold" onclick="add(${p.id})">Sepete ekle</button>
-    <button class="btn" onclick="ask(${p.id})">Fiyat sor</button>
-   </div>
-  </div>
- </article>`).join("")||'<div class="empty">Bu aramayla ürün bulunamadı.</div>';
-}
-function setBrand(b){document.getElementById("brand").value=b;render()}
-function add(id){const p=products.find(x=>x.id===id);const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();renderCart();alert(p.name+" sepete eklendi ❤️")}
-function remove(id){cart=cart.filter(x=>x.id!==id);save();renderCart()}
-function qty(id,d){const i=cart.find(x=>x.id===id);if(i)i.qty+=d;if(i&&i.qty<=0)remove(id);else{save();renderCart()}}
-function renderCart(){
- document.getElementById("count").textContent=cart.reduce((s,i)=>s+i.qty,0);
- let subtotal=0;
- document.getElementById("items").innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);if(p.price!==null)subtotal+=p.price*i.qty;return `<div class="cartitem"><div><b>${p.name}</b><div class="note">${money(p.price)}</div><div class="qty"><button onclick="qty(${p.id},-1)">−</button>${i.qty}<button onclick="qty(${p.id},1)">+</button></div><button class="btn" onclick="remove(${p.id})">Ürünü çıkar</button></div><b>${money(p.price===null?null:p.price*i.qty)}</b></div>`}).join("")||'<div class="empty">Sepetin boş. Ürünlerden birini ekle.</div>';
- if(document.getElementById("gift").checked)subtotal+=99;
- document.getElementById("total").textContent=money(subtotal);
-}
-function openCart(){document.getElementById("cart").style.display="flex";renderCart()}
-function closeCart(){document.getElementById("cart").style.display="none"}
-function ask(id){const p=products.find(x=>x.id===id);window.open("https://wa.me/"+WA+"?text="+encodeURIComponent("Merhaba Telefon Dünyası, "+p.name+" için güncel fiyat, depolama kapasitesi ve stok bilgisi alabilir miyim?"),"_blank")}
-document.getElementById("order").addEventListener("submit",e=>{
- e.preventDefault();if(!cart.length){alert("Önce sepete ürün ekle.");return}
- const lines=cart.map(i=>{const p=products.find(x=>x.id===i.id);return p.name+" x "+i.qty+" — "+money(p.price)}).join("\n");
- const msg="Merhaba Telefon Dünyası, sipariş talebim:\n\n"+lines+
- "\n\nHediye paketi: "+(document.getElementById("gift").checked?"Evet":"Hayır")+
- "\nHediye notu: "+document.getElementById("giftNote").value+
- "\nAd soyad: "+document.getElementById("customer").value+
- "\nTelefon: "+document.getElementById("phone").value+
- "\nAdres: "+document.getElementById("address").value+
- "\nNot: "+document.getElementById("extra").value+
- "\n\nLütfen kesin fiyat, stok ve kargo ücretini teyit eder misiniz?";
- window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
-});
-document.getElementById("year").textContent=new Date().getFullYear();
-render();renderCart();
+let cart=[];
+try{const saved=JSON.parse(localStorage.getItem("td-cart-v3")||"[]");if(Array.isArray(saved))cart=saved.filter(i=>products.some(p=>p.id===i.id)&&Number.isInteger(i.qty)&&i.qty>0)}catch(e){cart=[]}
+function money(n){return n===null||n===undefined?"Fiyat sor":new Intl.NumberFormat("tr-TR",{style:"currency",currency:"TRY",maximumFractionDigits:0}).format(n)}
+function save(){try{localStorage.setItem("td-cart-v3",JSON.stringify(cart))}catch(e){}}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function productCard(p){return `<article class="product"><div class="photo"><img src="${p.image}" alt="${safe(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback">📱<div style="font-size:12px">Fotoğraf yüklenemedi</div></div></div><div class="details"><div class="brand">${safe(p.brand)}</div><div class="name">${safe(p.name)}</div><div class="price">${money(p.price)}</div><div class="note">${safe(p.note)}</div><div class="actions"><button class="btn gold" onclick="addToCart(${p.id})">Sepete ekle</button><button class="btn" onclick="askPrice(${p.id})">Fiyat sor</button></div></div></article>`}
+function renderProducts(){const term=(document.getElementById("search")?.value||"").toLocaleLowerCase("tr-TR");const brand=document.getElementById("brand")?.value||"Tümü";const list=products.filter(p=>(brand==="Tümü"||p.brand===brand)&&(p.name+" "+p.brand).toLocaleLowerCase("tr-TR").includes(term));const el=document.getElementById("products");if(el)el.innerHTML=list.map(productCard).join("")||'<div class="empty">Bu aramayla ürün bulunamadı.</div>';document.querySelectorAll(".chip").forEach(b=>b.classList.toggle("active",b.textContent.includes(brand)||brand==="Tümü"&&b.textContent==="Tümü"))}
+function renderFeatured(){const el=document.getElementById("featured");if(el)el.innerHTML=products.slice(0,4).map(productCard).join("")}
+function setBrand(b){document.getElementById("brand").value=b;renderProducts()}
+function showView(name){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+name));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===name));if(name==="cart")renderCart();if(name==="phones")renderProducts();window.scrollTo({top:0,behavior:"smooth"})}
+function addToCart(id){const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();renderCart();showView("cart")}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);save();renderCart()}
+function changeQty(id,d){const i=cart.find(x=>x.id===id);if(!i)return;i.qty+=d;if(i.qty<=0)cart=cart.filter(x=>x.id!==id);save();renderCart()}
+function renderCart(){document.getElementById("count").textContent=cart.reduce((s,i)=>s+i.qty,0);let total=0;const items=document.getElementById("items");items.innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);if(p.price!==null)total+=p.price*i.qty;return `<div class="cartitem"><div style="min-width:0"><b>${safe(p.name)}</b><div class="small">${money(p.price)} / adet</div><div class="qty"><button type="button" aria-label="Azalt" onclick="changeQty(${p.id},-1)">−</button><span aria-label="Adet">${i.qty}</span><button type="button" aria-label="Artır" onclick="changeQty(${p.id},1)">+</button></div><button type="button" class="btn" onclick="removeItem(${p.id})">Ürünü çıkar</button></div><b>${p.price===null?"Fiyat sor":money(p.price*i.qty)}</b></div>`}).join("")||'<div class="empty">Sepetin boş. Telefonlar sekmesinden ürün ekleyebilirsin.</div>';if(document.getElementById("giftWrap").checked)total+=99;document.getElementById("total").textContent=money(total)+(cart.some(i=>products.find(p=>p.id===i.id).price===null)?" + fiyatı sorulan ürün":"");const brands=[...new Set(cart.map(i=>products.find(p=>p.id===i.id)?.brand).filter(Boolean))];document.getElementById("giftBrandInfo").textContent=brands.length?("Sepetindeki marka(lar): "+brands.join(", ")+". Hediye marka uyumu ve stok WhatsApp üzerinden teyit edilir."):"Önce sepete telefon ekle; hediye seçeneğini sipariş mesajına ekleyebilirsin."}
+function askPrice(id){const p=products.find(x=>x.id===id);const msg=`Merhaba Telefon Dünyası, ${p.name} için güncel fiyat, kapasite, stok ve garanti bilgisi alabilir miyim?`;window.location.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg)}
+document.getElementById("order").addEventListener("submit",function(e){e.preventDefault();if(!cart.length){alert("Önce sepete en az bir telefon ekle.");showView("phones");return}const lines=cart.map(i=>{const p=products.find(x=>x.id===i.id);return `${p.name} x ${i.qty} — ${money(p.price)}${p.price===null?" (fiyat teyidi gerekli)":""}`}).join("\n");const subtotal=cart.reduce((s,i)=>{const p=products.find(x=>x.id===i.id);return s+(p.price===null?0:p.price*i.qty)},0)+(document.getElementById("giftWrap").checked?99:0);const msg=`Merhaba Telefon Dünyası, sipariş talebim:\n\n${lines}\n\nHediye paketi: ${document.getElementById("giftWrap").checked?"Evet (+99 TL)":"Hayır"}\nHediye tercihi: ${document.getElementById("giftType").value}\nHediye notu: ${document.getElementById("giftNote").value.trim()||"Yok"}\nAra toplam (fiyatı belli ürünler ve hediye paketi): ${money(subtotal)}\n\nAd soyad: ${document.getElementById("customer").value.trim()}\nMüşteri telefonu: ${document.getElementById("phone").value.trim()}\nTeslimat adresi: ${document.getElementById("address").value.trim()}\nEk not: ${document.getElementById("extra").value.trim()||"Yok"}\n\nLütfen güncel fiyat, stok, hediye uygunluğu ve kargo ücretini teyit eder misiniz?`;window.location.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg)});
+document.getElementById("year").textContent=new Date().getFullYear();renderFeatured();renderProducts();renderCart();
 </script>
 </body>
 </html>
